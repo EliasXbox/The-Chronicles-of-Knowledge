@@ -1,4 +1,9 @@
 [
 null,
-{"id":1,"battlerName":"Player","characterIndex":0,"characterName":"Player","classId":1,"equips":[1,1,2,3,0],"faceIndex":0,"faceName":"Player","traits":[],"initialLevel":1,"maxLevel":99,"name":"Lumi","nickname":"O Aventureiro","note":"","profile":""}
+{"id":1,"battlerName":"Player","characterIndex":0,"characterName":"Player","classId":1,"equips":[1,1,2,3,0],"faceIndex":0,"faceName":"Player","traits":[],"initialLevel":1,"maxLevel":99,"name":"Lumi","nickname":"O Aventureiro","note":"","profile":""},
+{"id":2,"battlerName":"Carteiro","characterIndex":1,"characterName":"NPCs","classId":4,"equips":[0,0,0,0,0],"faceIndex":1,"faceName":"Carteiro","traits":[],"initialLevel":1,"maxLevel":99,"name":"Herry","nickname":"O Carteiro","note":"","profile":""},
+{"id":3,"battlerName":"Mariza","characterIndex":1,"characterName":"Player","classId":3,"equips":[0,0,0,0,0],"faceIndex":0,"faceName":"Mariza","traits":[],"initialLevel":1,"maxLevel":99,"name":"Mariza","nickname":"A Padeira","note":"","profile":""},
+{"id":4,"battlerName":"","characterIndex":0,"characterName":"","classId":1,"equips":[0,0,0,0,0],"faceIndex":0,"faceName":"","traits":[],"initialLevel":1,"maxLevel":99,"name":"","nickname":"","note":"","profile":""},
+{"id":5,"battlerName":"","characterIndex":0,"characterName":"","classId":1,"equips":[0,0,0,0,0],"faceIndex":0,"faceName":"","traits":[],"initialLevel":1,"maxLevel":99,"name":"","nickname":"","note":"","profile":""},
+{"id":6,"battlerName":"","characterIndex":0,"characterName":"","classId":1,"equips":[0,0,0,0,0],"faceIndex":0,"faceName":"","traits":[],"initialLevel":1,"maxLevel":99,"name":"","nickname":"","note":"","profile":""}
 ]
