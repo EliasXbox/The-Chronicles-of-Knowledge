@@ -4,9 +4,14 @@ RPG educativo feito no RPG Maker MV, com desafios de matemática, português e c
 
 - [Jogar no navegador](https://eliasxbox.github.io/The-Chronicles-of-Knowledge/)
 - [Baixar a demo para Windows](https://github.com/EliasXbox/The-Chronicles-of-Knowledge/releases/tag/demo1)
+- [Baixar o APK de teste para Android](https://github.com/EliasXbox/The-Chronicles-of-Knowledge/releases/download/demo1/As-Cronicas-do-Saber-Demo1-Android.apk)
 
 No Windows, extraia todo o ZIP para uma pasta e abra `Game.exe`.
-No celular, use a versão de navegador com toque. A exportação Android existe, mas ainda não foi empacotada como APK.
+No Chromebook e no celular, também é possível usar a versão de navegador com toque.
+O APK é uma versão de teste para Android 6 ou superior e inclui os arquivos do jogo para uso offline.
+A assinatura, a integridade e os arquivos do APK foram verificados. Ainda falta testar a instalação e a execução em um aparelho Android.
+
+Cliente Android: [Altimit Systems MV Android Client](https://github.com/AltimitSystems/mv-android-client), Copyright (c) 2017-2019 Altimit Community Contributors, Apache License 2.0. Os avisos estão incluídos no APK. A estrutura foi adaptada a partir do APK compatível fornecido pelo autor da demo, com novo nome, ícone, identificação e arquivos do jogo.
 
 ## Controles
 
