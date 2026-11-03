@@ -1,29 +1,25 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="viewport" content="user-scalable=no">
-        <link rel="icon" href="icon/icon.png" type="image/png">
-        <link rel="apple-touch-icon" href="icon/icon.png">
-        <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
-        <title>As Crônicas do Saber</title>
-    </head>
-    <body style="background-color: black">
-        <script type="text/javascript" src="js/libs/pixi.js"></script>
-        <script type="text/javascript" src="js/libs/pixi-tilemap.js"></script>
-        <script type="text/javascript" src="js/libs/pixi-picture.js"></script>
-        <script type="text/javascript" src="js/libs/fpsmeter.js"></script>
-        <script type="text/javascript" src="js/libs/lz-string.js"></script>
-        <script type="text/javascript" src="js/libs/iphone-inline-video.browser.js"></script>
-        <script type="text/javascript" src="js/rpg_core.js"></script>
-        <script type="text/javascript" src="js/rpg_managers.js"></script>
-        <script type="text/javascript" src="js/rpg_objects.js"></script>
-        <script type="text/javascript" src="js/rpg_scenes.js"></script>
-        <script type="text/javascript" src="js/rpg_sprites.js"></script>
-        <script type="text/javascript" src="js/rpg_windows.js"></script>
-        <script type="text/javascript" src="js/plugins.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-    </body>
-</html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111c27">
+<meta name="description" content="Experimente a demo de As Crônicas do Saber: um RPG educativo com desafios de matemática, português e coordenação no combate.">
+<link rel="icon" href="icon/icon.png"><title>As Crônicas do Saber — Demo</title>
+<style>
+@import url('fonts/gamefont.css');
+:root{color-scheme:dark;--gold:#efd7a0;--muted:#b4c4cb;--ink:#111c27}*{box-sizing:border-box}body{margin:0;background:var(--ink);color:#faf7ee;font:17px/1.65 Georgia,serif}a{color:inherit}.scene{min-height:100svh;position:relative;isolation:isolate;display:flex;flex-direction:column;overflow:hidden}.scene:before{content:'';position:absolute;inset:0;z-index:-2;background:url('img/titles1/Crystal.png') center/cover no-repeat;image-rendering:auto}.scene:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,21,32,.97),rgba(9,21,32,.65) 58%,rgba(9,21,32,.22)),linear-gradient(0deg,#111c27,transparent 60%)}header,main,footer{width:min(1120px,calc(100% - 56px));margin:auto}header{display:flex;align-items:center;justify-content:space-between;padding:28px 0;font:13px/1.4 system-ui,sans-serif;letter-spacing:.08em}header span{color:var(--gold)}header a{text-decoration:none;border-bottom:1px solid #ffffff50;padding:5px 0}main{padding:70px 0 100px}.label{font:12px/1.5 system-ui,sans-serif;letter-spacing:.22em;color:var(--gold);text-transform:uppercase}.label:before{content:'✦';margin-right:12px}h1{font-size:clamp(48px,8vw,94px);line-height:1.04;letter-spacing:-.035em;font-weight:400;margin:24px 0 30px;max-width:750px}h1 em{color:var(--gold);font-style:normal}.intro{max-width:500px;color:#d7e0e4;font-size:20px}.actions{display:flex;flex-wrap:wrap;gap:14px;margin:34px 0 15px}.button{display:inline-flex;align-items:center;justify-content:center;gap:25px;padding:15px 23px;border:1px solid #efd7a070;text-decoration:none;font:600 15px/1.4 system-ui,sans-serif;transition:.18s}.primary{background:var(--gold);color:#152330}.button:hover{transform:translateY(-2px);border-color:#efd7a0;background:#32424e}.primary:hover{background:#ffe8b6;color:#152330}.button:focus-visible{outline:3px solid white;outline-offset:4px}.note{font:13px/1.6 system-ui,sans-serif;color:var(--muted);max-width:530px}.subjects{display:flex;flex-wrap:wrap;gap:18px 32px;margin-top:60px;padding-top:24px;border-top:1px solid #ffffff22;max-width:600px;font:14px/1.5 system-ui,sans-serif;color:#d7e0e4}.subjects b{font-weight:400;color:var(--gold);margin-right:8px}.android{margin-top:25px}.android strong{color:#eee2c5;font-weight:500}footer{padding:22px 0;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid #ffffff20;font:12px/1.5 system-ui,sans-serif;color:var(--muted)}@media(max-width:600px){header,main,footer{width:calc(100% - 36px)}main{padding:50px 0}.intro{font-size:18px}.actions{flex-direction:column;align-items:stretch}.scene:after{background:linear-gradient(90deg,#091520ee,#091520aa),linear-gradient(0deg,#111c27,transparent)}h1{font-size:56px}.subjects{margin-top:40px}}
+</style>
+</head>
+<body><div class="scene">
+<header><span>AS CRÔNICAS DO SABER</span><a href="https://github.com/EliasXbox/The-Chronicles-of-Knowledge">GitHub ↗</a></header>
+<main>
+<div class="label">RPG educativo · Demo 1</div>
+<h1>Uma aventura.<br>O poder de <em>aprender.</em></h1>
+<p class="intro">Entre em As Crônicas do Saber e coloque seu conhecimento em ação. Cada turno traz um novo desafio.</p>
+<div class="actions"><a class="button primary" href="play.html">Jogar no navegador <span aria-hidden="true">→</span></a><a class="button" href="https://github.com/EliasXbox/The-Chronicles-of-Knowledge/releases/download/demo1/As-Cronicas-do-Saber-Demo1-Windows.zip">Baixar para Windows <span aria-hidden="true">↓</span></a></div>
+<p class="note">No computador ou no celular, jogue pelo navegador. O primeiro carregamento pode levar um pouco, enquanto os recursos são baixados. Seus saves ficam neste navegador.</p>
+<div class="subjects"><span><b>01</b> Matemática</span><span><b>02</b> Português</span><span><b>03</b> Coordenação</span></div>
+<p class="note android"><strong>Android</strong> · Jogue pelo navegador usando toque. A versão instalável em APK ainda está em preparação.</p>
+</main>
+<footer><span>As Crônicas do Saber · Uma demo em desenvolvimento</span><span>Teclado e toque · Combate por turnos</span></footer>
+</div></body></html>
