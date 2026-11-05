@@ -4,7 +4,7 @@ RPG educativo feito no RPG Maker MV, com desafios de matemática, português e c
 
 - [Jogar no navegador](https://eliasxbox.github.io/The-Chronicles-of-Knowledge/)
 - [Baixar a demo para Windows](https://github.com/EliasXbox/The-Chronicles-of-Knowledge/releases/tag/demo1)
-- [Baixar o APK de teste para Android](https://github.com/EliasXbox/The-Chronicles-of-Knowledge/releases/download/demo1/As-Cronicas-do-Saber-Demo1.1-Android.apk)
+- [Baixar o APK de teste para Android](https://github.com/EliasXbox/The-Chronicles-of-Knowledge/releases/download/demo1/As-Cronicas-do-Saber-Demo1.2-Android.apk)
 
 No Windows, extraia todo o ZIP para uma pasta e abra `Game.exe`.
 No Chromebook e no celular, também é possível usar a versão de navegador com toque.
