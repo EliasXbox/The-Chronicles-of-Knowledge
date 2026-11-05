@@ -1,10 +1,10 @@
-# As Crônicas do Saber — Demo 1
+# As Crônicas do Saber — Demo 1.1
 
 RPG educativo feito no RPG Maker MV, com desafios de matemática, português e coordenação durante o combate por turnos.
 
 - [Jogar no navegador](https://eliasxbox.github.io/The-Chronicles-of-Knowledge/)
 - [Baixar a demo para Windows](https://github.com/EliasXbox/The-Chronicles-of-Knowledge/releases/tag/demo1)
-- [Baixar o APK de teste para Android](https://github.com/EliasXbox/The-Chronicles-of-Knowledge/releases/download/demo1/As-Cronicas-do-Saber-Demo1-Android.apk)
+- [Baixar o APK de teste para Android](https://github.com/EliasXbox/The-Chronicles-of-Knowledge/releases/download/demo1/As-Cronicas-do-Saber-Demo1.1-Android.apk)
 
 No Windows, extraia todo o ZIP para uma pasta e abra `Game.exe`.
 No Chromebook e no celular, também é possível usar a versão de navegador com toque.
@@ -19,7 +19,7 @@ Use setas e Enter para os menus, ou mouse/toque. Nos ataques físicos, espere o 
 
 ## Arquivos publicados
 
-Esta versão web foi preparada a partir da exportação Android da Demo 1 no PC (`www`), incluindo imagens e áudio. `index.html` é a página da demo e `play.html` abre o jogo. Saves locais e arquivos temporários não acompanham a publicação.
+Esta versão web foi preparada a partir da exportação Android da Demo 1.1 no PC (`www`), incluindo imagens e áudio. `index.html` é a página da demo e `play.html` abre o jogo. Saves locais e arquivos temporários não acompanham a publicação.
 
 Para testar localmente, sirva esta pasta por HTTP e abra `index.html`; abrir o jogo diretamente por `file://` pode impedir o carregamento dos dados.
 
