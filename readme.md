@@ -1,4 +1,4 @@
-# As Crônicas do Saber — Demo 1.1
+# As Crônicas do Saber — Demo 1.2
 
 RPG educativo feito no RPG Maker MV, com desafios de matemática, português e coordenação durante o combate por turnos.
 
@@ -19,7 +19,7 @@ Use setas e Enter para os menus, ou mouse/toque. Nos ataques físicos, espere o 
 
 ## Arquivos publicados
 
-Esta versão web foi preparada a partir da exportação Android da Demo 1.1 no PC (`www`), incluindo imagens e áudio. `index.html` é a página da demo e `play.html` abre o jogo. Saves locais e arquivos temporários não acompanham a publicação.
+Esta versão web foi preparada a partir da exportação Android da Demo 1.2 no PC (`www`), incluindo imagens e áudio. `index.html` é a página da demo e `play.html` abre o jogo. Saves locais e arquivos temporários não acompanham a publicação.
 
 Para testar localmente, sirva esta pasta por HTTP e abra `index.html`; abrir o jogo diretamente por `file://` pode impedir o carregamento dos dados.
 

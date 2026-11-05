@@ -27,20 +27,43 @@
             throw new Error('ACS.beginTutorial: use IDs positivos e switches diferentes.');
         }
         this._tutorial = {actorId:ids[0],magicSkillId:ids[1],attackSwitch:ids[2],magicSwitch:ids[3],attackDone:false,magicDone:false};
+        this._healingTutorial = null;
         $gameSwitches.setValue(ids[2],false); $gameSwitches.setValue(ids[3],false);
     };
-    ACS.stopTutorial = function() { this._tutorial = null; };
+    ACS.beginHealingTutorial = function(actorId, skillId, successSwitch) {
+        var actor = $gameActors.actor(actorId), skill = $dataSkills[skillId];
+        if (!actor || !skill || !Number.isInteger(successSwitch) || successSwitch < 1) throw new Error('ACS: configuração de cura inválida.');
+        this._healingTutorial = {actorId:actorId,skillId:skillId,successSwitch:successSwitch};
+        $gameSwitches.setValue(successSwitch,false);
+        actor.learnSkill(skillId);
+        actor.gainMp(Math.max(0,actor.skillMpCost(skill) - actor.mp));
+        var damage = Math.min(Math.max(1,Math.floor(actor.mhp * 0.35)),Math.max(0,actor.hp - 1));
+        actor.gainHp(-damage);
+        actor.startAnimation(1,false,0); actor.performDamage(); actor.startDamagePopup();
+        BattleManager.refreshStatus();
+    };
+    ACS.stopTutorial = function() { this._tutorial = null; this._healingTutorial = null; };
     var applyAction = Game_Action.prototype.apply;
     Game_Action.prototype.apply = function(target) {
+        var previousHp = target.hp;
         applyAction.call(this,target);
         var watch = BattleManager._acsTutorialAction;
         if (watch && watch.action === this && target.isEnemy() && target.result().isHit()) watch.hit = true;
+        if (watch && watch.action === this && target.isActor && target.isActor() && target.hp > previousHp && target.result().isHit()) {
+            watch.healedActors = watch.healedActors || {};
+            watch.healedActors[target.actorId()] = true;
+        }
     };
     var endAction = BattleManager.endAction;
     BattleManager.endAction = function() {
         var watch = this._acsTutorialAction;
         this._acsTutorialAction = null;
         endAction.call(this);
+        var healing = ACS._healingTutorial;
+        if (healing && watch && watch.actor.actorId() === healing.actorId && watch.action.item().id === healing.skillId && watch.healedActors && watch.healedActors[healing.actorId]) {
+            $gameSwitches.setValue(healing.successSwitch,true);
+            ACS._healingTutorial = null;
+        }
         var tutorial = ACS._tutorial;
         if (!watch || !watch.hit || !tutorial || watch.actor.actorId() !== tutorial.actorId) return;
         if (!tutorial.attackDone && watch.attack) {
@@ -287,6 +310,11 @@
             this.startAction();
         } else {
             pending.actor.useItem(pending.action.item());
+            var healing = ACS._healingTutorial;
+            if (healing && pending.actor.actorId() === healing.actorId && pending.action.item().id === healing.skillId) {
+                // A failed practice answer must not leave the lesson without MP.
+                pending.actor.gainMp(pending.actor.skillMpCost(pending.action.item()));
+            }
             this.refreshStatus();
             this._logWindow.push('addText', pending.subject === 'pe' ? 'O golpe falhou: movimento fora do ritmo.' : 'A magia falhou. Resposta: ' + expected + '.');
             this._logWindow.push('wait');
